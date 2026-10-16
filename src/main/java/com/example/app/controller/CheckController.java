@@ -21,7 +21,7 @@ public class CheckController {
 
     @GetMapping("/api/health")
     public String health() {
-        return "OK";
+        return "아뇨아뇨아뇨아뇨";
     }
 
     @GetMapping("/api/db")

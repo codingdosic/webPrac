@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: app
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:15432/appdb}
+    username: ${DB_USERNAME:appuser}
+    password: ${DB_PASSWORD:apppass}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:16379}
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health
+
